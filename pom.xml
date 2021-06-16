@@ -4,9 +4,44 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.spyne</groupId>
+  <groupId>org.spyne.javapluginquickstart</groupId>
   <artifactId>java-plugin-quickstart</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
+  <modules>
+    <module>java-plugin-quickstart-spi</module>
+    <module>java-plugin-quickstart-core</module>
+
+    <!--  Build plugins -->
+    <module>java-plugin-quickstart-plugin-foo</module>
+
+    <!--  Build the distribution -->
+    <module>java-plugin-quickstart-distribution</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.spyne.javapluginquickstart</groupId>
+        <artifactId>java-plugin-quickstart-spi</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+    </pluginManagement>
+  </build>
 
 </project>

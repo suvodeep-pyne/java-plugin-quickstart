@@ -27,6 +27,11 @@
         <artifactId>java-plugin-quickstart-spi</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <artifactId>java-plugin-quickstart-core</artifactId>
+        <groupId>org.spyne.javapluginquickstart</groupId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>

@@ -11,6 +11,39 @@
   </parent>
 
   <artifactId>java-plugin-quickstart-distribution</artifactId>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/assembly/dist.xml</descriptor>
+              </descriptors>
+            </configuration>
+            <goals>
+              <goal>attached</goal>
+            </goals>
+            <id>user_distribution</id>
+            <phase>package</phase>
+          </execution>
+        </executions>
+        <version>2.2-beta-5</version>
+      </plugin>
+    </plugins>
+  </build>
 
+  <dependencies>
+    <dependency>
+      <artifactId>java-plugin-quickstart-core</artifactId>
+      <groupId>org.spyne.javapluginquickstart</groupId>
+    </dependency>
+  </dependencies>
+
+
+  <properties>
+    <root>${basedir}/..</root>
+  </properties>
 
 </project>

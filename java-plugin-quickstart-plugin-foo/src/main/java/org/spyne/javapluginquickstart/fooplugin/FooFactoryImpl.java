@@ -7,7 +7,7 @@ public class FooFactoryImpl implements FooFactory {
 
   @Override
   public String name() {
-    return "fooFactory";
+    return "foo";
   }
 
   @Override

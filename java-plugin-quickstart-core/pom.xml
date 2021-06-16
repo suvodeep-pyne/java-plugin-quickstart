@@ -12,4 +12,12 @@
 
   <artifactId>java-plugin-quickstart-core</artifactId>
 
+  <dependencies>
+    <dependency>
+      <artifactId>java-plugin-quickstart-spi</artifactId>
+      <groupId>org.spyne.javapluginquickstart</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
 </project>
